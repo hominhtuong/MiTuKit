@@ -89,6 +89,7 @@ open class IndicatorView: UIView {
             self.containerView.snp.updateConstraints {
                 $0.width.height.equalTo(containerWidth)
             }
+            self.layoutIfNeeded()
         }
     }
     
@@ -125,10 +126,14 @@ open class IndicatorView: UIView {
 
 public extension IndicatorView {
     func startAnimating() {
+        self.indicatorView.isHidden = false
+        self.indicatorView.isUserInteractionEnabled = true
         self.indicatorView.startAnimating()
     }
     
     func stopAnimating() {
+        self.indicatorView.isHidden = true
+        self.indicatorView.isUserInteractionEnabled = false
         self.indicatorView.stopAnimating()
     }
 }

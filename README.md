@@ -8,7 +8,7 @@
     MiTuKit is a lightweight and powerful Swift library designed to accelerate development with UIKit.
     It provides a collection of essential classes and extensions, simplifying coding by leveraging inheritance and reusable components.
     With MiTuKit, developers can write cleaner and more efficient code, enhancing productivity in iOS projects.
-    This CocoaPods library is software development kit for iOS, the project depends on 'SnapKit', '~> 5.6.0' 
+    This CocoaPods library is software development kit for iOS, the project depends on 'SnapKit', '~> 5.7.0' 
 
 
 ## Installation with CocoaPods
@@ -28,7 +28,7 @@ Once you have your Swift package set up, adding MiTuKit as a dependency is as ea
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/hominhtuong/MiTuKit.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/hominhtuong/MiTuKit.git", .upToNextMajor(from: "1.0.1"))
 ]
 ```
 

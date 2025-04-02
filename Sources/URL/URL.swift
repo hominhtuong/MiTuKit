@@ -2,10 +2,11 @@
 //  URL.swift
 //  MiTuKit
 //
-//  Created by Admin on 28/2/25.
+//  Created by Mitu Ultra on 28/2/25.
 //
 
 import UIKit
+import CryptoKit
 
 public extension URL {
     var getPath: String {
@@ -40,6 +41,12 @@ public extension URL {
     
     var modificationDate: Date? {
         return attributes?[.modificationDate] as? Date
+    }
+    
+    var hashedKey: String {
+        let data = Data(self.lastPathComponent.utf8)
+        let hash = Insecure.MD5.hash(data: data)
+        return hash.map { String(format: "%02hhx", $0) }.joined()
     }
     
 }

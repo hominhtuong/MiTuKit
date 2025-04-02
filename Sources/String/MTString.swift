@@ -241,6 +241,9 @@ public extension String {
         return predicate.evaluate(with: self)
     }
     
+    func truncate(to length: Int) -> String {
+        return self.count > length ? String(self.prefix(length)) : self
+    }
 }
 
 //MARK: - UIImage
